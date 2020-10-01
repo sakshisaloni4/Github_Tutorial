@@ -1,0 +1,28 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+class Currency{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-->0){
+           int s=sc.nextInt();
+           int n=sc.nextInt();
+            int c=0;
+            if(s%2!=0){
+               s=s-1;
+                c++;
+            }
+            if(s>n){
+                while(s>n){
+                    c=c+s/n;
+                    s=s%n;
+                }
+            }
+            if(s<=n&&s!=0)
+            c++;
+            System.out.println(c);
+}
+}
+}
